@@ -7,8 +7,6 @@ import (
 	"strings"
 	"time"
 
-	"C"
-
 	"golang.org/x/exp/constraints"
 )
 
@@ -20,7 +18,6 @@ type semVer struct {
 }
 
 // Return a string in the form of vX.Y.Z, where X, Y and Z corresponds to the major, minor and patch version, respectively
-//export String
 func (s *semVer) String() string {
 	return fmt.Sprintf("v%d.%d.%d", s.Major, s.Minor, s.Patch)
 }
